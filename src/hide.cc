@@ -7,7 +7,7 @@ int main(int argc, char **argv)
 {
   if (argc != 3)
   {
-    std::cerr << "Usage : ./main image  file_of_text_to_hide\n";
+    std::cerr << "Usage : ./hide image path_of_text_to_hide\n";
     return 1;
   }
   //Load image
@@ -27,7 +27,7 @@ int main(int argc, char **argv)
   hide_text_in_image(image, file_content);
   image.save("./output.png");
 
-  std::cout << "Text hidden in ./.poutput.png.\n";
+  std::cout << "Text hidden in ./output.png.\n";
 
   return 0;
 }
