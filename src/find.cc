@@ -13,9 +13,13 @@ int main(int argc, char **argv)
   }
   //Load image
   auto image = Image(argv[1]);
-  
+
+  //find text in image
   auto nb_pixels = image.getWidth() * image.getHeight();
   auto hidden_text = get_text_in_image(image, nb_pixels);
+
+  //display decrypted text
   std::cout << hidden_text << '\n';
+
   return 0;
 }

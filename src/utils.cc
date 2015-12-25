@@ -1,5 +1,6 @@
 #include "utils.hh"
 
+
 Color::Color(int r, int g, int b)
 {
   this->r = r;
@@ -17,7 +18,7 @@ Image::Image(const std::string& path)
   }
 }
 
-void Image::show(const std::string& name) const
+void Image::show(const std::string& window_name) const
 {
   cv::namedWindow(name, cv::WINDOW_AUTOSIZE);
   cv::imshow(name, image_);

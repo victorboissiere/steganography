@@ -23,12 +23,12 @@ int binary_to_int(const std::string& binary)
   return x;
 }
 
-void change_pixel(unsigned char& a, bool pair)
+void change_pixel(unsigned char& c, bool even)
 {
-  if (a == 255 && pair)
-    a--;
-  else if ((pair && a % 2 == 1) || (!pair && a % 2 == 0))
-    a++;
+  if (c == 255 && pair)
+    c--;
+  else if ((pair && c % 2 == 1) || (!pair && c % 2 == 0))
+    c++;
 }
 
 void hide_text_in_image(Image& image, std::string text)
