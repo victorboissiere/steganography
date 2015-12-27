@@ -20,8 +20,8 @@ Image::Image(const std::string& path)
 
 void Image::show(const std::string& window_name) const
 {
-  cv::namedWindow(name, cv::WINDOW_AUTOSIZE);
-  cv::imshow(name, image_);
+  cv::namedWindow(window_name, cv::WINDOW_AUTOSIZE);
+  cv::imshow(window_name, image_);
 }
 
 void Image::waitKey() const

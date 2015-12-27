@@ -25,9 +25,9 @@ int binary_to_int(const std::string& binary)
 
 void change_pixel(unsigned char& c, bool even)
 {
-  if (c == 255 && pair)
+  if (c == 255 && even)
     c--;
-  else if ((pair && c % 2 == 1) || (!pair && c % 2 == 0))
+  else if ((even && c % 2 == 1) || (!even && c % 2 == 0))
     c++;
 }
 
